@@ -15,6 +15,6 @@ class User:
             self.password = password
             self.role = role
         )
-        user('{}, {}, {}, {}').format(name, username, password, role)
+        user('{}, {}, {}').format(username, password, role)
         users.append(user)
         return user
