@@ -11,9 +11,9 @@ class User:
     # creating the user
     def register_user(self, name, username, password, role):
         user = dict(
-            self.username = username
-            self.password = password
-            self.role = role
+            username = self.username
+            password = self.password
+            role = self.role
         )
         user('{}, {}, {}').format(username, password, role)
         users.append(user)
