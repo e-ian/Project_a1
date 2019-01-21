@@ -16,7 +16,6 @@ class Comment:
             timestamp = self.timestamp,
             author = self.author
         )
-        comment('{},{}').format(message, author)
         comments.append(comment)
         return comment
   
