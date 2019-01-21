@@ -10,15 +10,13 @@ class User:
         self.role = role
 
     # creating the user
-    def register_user(self):
+    def register_user(self, name, username, password, role):
         user = dict(
-            username=self.username,
-            email=self.email,
-            password=self.password,
-            last_seen=self.last_seen,
-            active=self.active
-            role = self.role
+            self.name = name
+            self.username = username
+            self.password = password
+            self.role = role
         )
-        # user('{}, {}, {}, {}').format(self.name, self.username, self.password, self.role)
+        user('{}, {}, {}, {}').format(name, username, password, role)
         users.append(user)
         return user
