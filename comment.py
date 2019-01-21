@@ -10,12 +10,13 @@ class Comment:
         self.author = author
 
     #function for creating a comment
-    def create_comment(self):
+    def create_comment(self,message, author):
         comment = dict(
             message = self.message,
             timestamp = self.timestamp,
             author = self.author
         )
+        comment = ('{},{}').format(message, author)
         comments.append(comment)
         return comment
   
