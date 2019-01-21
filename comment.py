@@ -4,7 +4,7 @@ comments = []
 
 class Comment:
 
-    def __init__(self,message, timestamp, author):
+    def __init__(self,message, author):
         self.message = message
         self.timestamp = datetime.today()
         self.author = author
@@ -16,7 +16,7 @@ class Comment:
             timestamp = self.timestamp,
             author = self.author
         )
-        comment = ('{},{}').format(message, author)
+        comment('{},{}').format(message, author)
         comments.append(comment)
         return comment
   
