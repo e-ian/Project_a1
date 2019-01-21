@@ -45,10 +45,16 @@ class User:
     # creating the user
     def register_user(self, name, username, password, role):
         user = dict(
-            self.username = username
-            self.password = password
-            self.role = role
+            username = self.username,
+            password = self.password,
+            role = self.role,
         )
+        if not self.validate_password():
+            print("Password should contain atleast 4 characters, lower case, number character and upper case")
+        if not self.validate_role():
+            print("role cannot be empty and should be atleast 4 characters long")
+        if not self.validate_user_name():
+            print("username cannot be empty and takes atleast 4 characters")
         user('{}, {}, {}').format(username, password, role)
         users.append(user)
         return user
