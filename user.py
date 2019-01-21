@@ -2,10 +2,14 @@
 import re
 import datetime
 class User:
-    def __init__(self, name, username, password):
-        self.name = name
+    # list to hold the user
+    users = []
+
+    # initializing the user model
+    def __init__(self, username, password, role):
         self.username = username
         self.password = password
+        self.role = role
         
 
     def validate_password(self):
@@ -23,7 +27,7 @@ class User:
         else: 
             return True
 
-    def valiadate_user_name(self):
+    def validate_user_name(self):
         """
         method validating username on registering a user """
         if not self.username and len(self.username) < 4:
@@ -37,3 +41,14 @@ class User:
             return False
         else:
             return True
+
+    # creating the user
+    def register_user(self, name, username, password, role):
+        user = dict(
+            self.username = username
+            self.password = password
+            self.role = role
+        )
+        user('{}, {}, {}').format(username, password, role)
+        users.append(user)
+        return user
